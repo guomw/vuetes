@@ -9,6 +9,10 @@
 		</div>
 		<p style="height:42px"></p>
 		<div class="weui_tab_bd" style="padding-bottom:0px">
+			<!--<transition>
+				<div v-bind:key="tabIndex" v-html="buttonMessage">					
+				</div>
+			</transition>-->
 			<!-- 热门 -->
 			<find-tab1 v-if="tabIndex==1"></find-tab1>
 			<!-- 圈子 -->
@@ -30,6 +34,16 @@
 		data(){
 			return {
 				tabIndex:1
+			}
+		},
+		computed:{
+			buttonMessage:function(){
+				switch (this.tabIndex) {
+					case 1: 
+						return "ddd";
+					case 2:
+					return "333";
+				}
 			}
 		},
 		methods:{
