@@ -1,43 +1,41 @@
 <template>
 	<div>
-	<div class="weui_navbar daohangs">
-		<a href="javascript:void(0);" @click="doClickNav(1)" class="weui_navbar_item " :class="{weui_bar_item_on:index==1}">
-			<p class="kimg dhshouyeicon"></p>
-			<p>首页</p>
-		</a>
-		<a href="javascript:void(0);" @click="doClickNav(2)" class="weui_navbar_item " :class="{weui_bar_item_on:index==2}">
-			<p class="kimg dhfenleiicon"></p>
-			<p>分类</p>
-		</a>
-		<router-link to="/index/tab1" class="weui_navbar_item" active-class="weui_bar_item_on">
-		<!--<a href="javascript:void(0);" @click="doClickNav(3)" class="weui_navbar_item " :class="{weui_bar_item_on:index==3}">-->
-			<p class="kimg faxxx"></p>
-			<p style="z-index:99999; position:absolute;left:0px;right:0px;">发现</p>
-			<div style="position:absolute;bottom:0px;left:0px;right:0px;">
-				<p class="faxxxicon"></p>
-				<div style="position:absolute;bottom:0px;left:0px;right:0px; z-index:-1">
-					<p style=" height:5.5em; text-align:center; margin:0 auto;background-color:#fff; border-radius:100%; border:1px solid #eee">
-					</p>
+		<div class="weui_navbar daohangs">
+			<router-link to="/home" class="weui_navbar_item"  active-class="weui_bar_item_on">
+				<p class="kimg dhshouyeicon"></p>
+				<p>首页</p>
+			</router-link>
+
+			<router-link to="/cfy" class="weui_navbar_item" active-class="weui_bar_item_on">
+				<p class="kimg dhfenleiicon"></p>
+				<p>分类</p>
+			</router-link>
+			<router-link to="/index/tab1" class="weui_navbar_item" active-class="weui_bar_item_on">
+				<p class="kimg faxxx"></p>
+				<p style="z-index:99999; position:absolute;left:0px;right:0px;">发现</p>
+				<div style="position:absolute;bottom:0px;left:0px;right:0px;">
+					<p class="faxxxicon"></p>
+					<div style="position:absolute;bottom:0px;left:0px;right:0px; z-index:-1">
+						<p style=" height:5.5em; text-align:center; margin:0 auto;background-color:#fff; border-radius:100%; border:1px solid #eee">
+						</p>
+					</div>
 				</div>
-			</div>
-		<!--</a>-->
-		</router-link>
-		<a href="javascript:void(0);" @click="doClickNav(4)" class="weui_navbar_item " :class="{weui_bar_item_on:index==4}">
-			<p class="kimg dhgouwucheicon"></p>
-			<p>购物车</p>
-		</a>
-		<router-link :to="{name:'my',path:'/my'}" class="weui_navbar_item" active-class="weui_bar_item_on">
-		<!--<a href="javascript:void(0);" @click="doClickNav(5)" class="weui_navbar_item " :class="{weui_bar_item_on:index==5}">-->
-			<p class="kimg dhzhongxinicon"></p>
-			<p> 我的</p>
-		<!--</a>-->
-		</router-link>		
-	</div>	
+			</router-link>
+
+			<router-link to="/cart" class="weui_navbar_item" active-class="weui_bar_item_on">
+				<p class="kimg dhgouwucheicon"></p>
+				<p>购物车</p>
+			</router-link>
+			
+			<router-link to="/my" class="weui_navbar_item" active-class="weui_bar_item_on">
+				<p class="kimg dhzhongxinicon"></p>
+				<p> 我的</p>
+			</router-link>
+		</div>
 	</div>
 </template>
 
 <script>
-	
 export default {
 	data () {
 		return {
@@ -46,6 +44,7 @@ export default {
 	},
 	methods:{
 		doClickNav:function(index){
+			
 			this.index=index;
 			this.$emit('child-tell-me-something',index);
 		}
