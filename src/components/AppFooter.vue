@@ -1,4 +1,5 @@
 <template>
+	<div>
 	<div class="weui_navbar daohangs">
 		<a href="javascript:void(0);" @click="doClickNav(1)" class="weui_navbar_item " :class="{weui_bar_item_on:index==1}">
 			<p class="kimg dhshouyeicon"></p>
@@ -8,7 +9,8 @@
 			<p class="kimg dhfenleiicon"></p>
 			<p>分类</p>
 		</a>
-		<a href="javascript:void(0);" @click="doClickNav(3)" class="weui_navbar_item " :class="{weui_bar_item_on:index==3}">
+		<router-link to="/index/tab1" class="weui_navbar_item" active-class="weui_bar_item_on">
+		<!--<a href="javascript:void(0);" @click="doClickNav(3)" class="weui_navbar_item " :class="{weui_bar_item_on:index==3}">-->
 			<p class="kimg faxxx"></p>
 			<p style="z-index:99999; position:absolute;left:0px;right:0px;">发现</p>
 			<div style="position:absolute;bottom:0px;left:0px;right:0px;">
@@ -18,15 +20,19 @@
 					</p>
 				</div>
 			</div>
-		</a>
+		<!--</a>-->
+		</router-link>
 		<a href="javascript:void(0);" @click="doClickNav(4)" class="weui_navbar_item " :class="{weui_bar_item_on:index==4}">
 			<p class="kimg dhgouwucheicon"></p>
 			<p>购物车</p>
 		</a>
-		<a href="javascript:void(0);" @click="doClickNav(5)" class="weui_navbar_item " :class="{weui_bar_item_on:index==5}">
+		<router-link :to="{name:'my',path:'/my'}" class="weui_navbar_item" active-class="weui_bar_item_on">
+		<!--<a href="javascript:void(0);" @click="doClickNav(5)" class="weui_navbar_item " :class="{weui_bar_item_on:index==5}">-->
 			<p class="kimg dhzhongxinicon"></p>
 			<p> 我的</p>
-		</a>
+		<!--</a>-->
+		</router-link>		
+	</div>	
 	</div>
 </template>
 

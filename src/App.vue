@@ -1,10 +1,10 @@
-<template>   
-  <div>
-    <find-center v-if="navIndex==3"></find-center>        
-    <my-center v-if="navIndex==5"></my-center>
-    
-    <app-footer @child-tell-me-something="listenToNavbarSwitch"></app-footer>
-   </div> 
+<template>
+	<div>
+		<!--<find-center v-if="navIndex==3"></find-center>-->
+		<!--<my-center v-if="navIndex==5"></my-center>    -->
+		<app-footer @child-tell-me-something="listenToNavbarSwitch"></app-footer>    
+    <router-view></router-view>
+	</div>
 </template>
 
 <script>
@@ -39,5 +39,5 @@ export default {
 </script>
 
 <style>
-  @import url(./assets/css/weui.min-gggeren-diy.css);
+	@import url(./assets/css/weui.min-gggeren-diy.css);
 </style>
