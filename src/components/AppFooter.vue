@@ -1,16 +1,16 @@
 <template>
 	<div>
 		<div class="weui_navbar daohangs">
-			<router-link to="/home" class="weui_navbar_item"  active-class="weui_bar_item_on">
+			<router-link to="/home" replace class="weui_navbar_item"  active-class="weui_bar_item_on">
 				<p class="kimg dhshouyeicon"></p>
 				<p>首页</p>
 			</router-link>
 
-			<router-link to="/cfy" class="weui_navbar_item" active-class="weui_bar_item_on">
+			<router-link to="/cfy" replace class="weui_navbar_item"   active-class="weui_bar_item_on">
 				<p class="kimg dhfenleiicon"></p>
 				<p>分类</p>
 			</router-link>
-			<router-link to="/index/tab1" class="weui_navbar_item" active-class="weui_bar_item_on">
+			<router-link to="/index/tab1" replace class="weui_navbar_item"   active-class="weui_bar_item_on">
 				<p class="kimg faxxx"></p>
 				<p style="z-index:99999; position:absolute;left:0px;right:0px;">发现</p>
 				<div style="position:absolute;bottom:0px;left:0px;right:0px;">
@@ -22,12 +22,12 @@
 				</div>
 			</router-link>
 
-			<router-link to="/cart" class="weui_navbar_item" active-class="weui_bar_item_on">
+			<router-link to="/cart" replace class="weui_navbar_item" active-class="weui_bar_item_on">
 				<p class="kimg dhgouwucheicon"></p>
 				<p>购物车</p>
 			</router-link>
 			
-			<router-link to="/my" class="weui_navbar_item" active-class="weui_bar_item_on">
+			<router-link to="/my" replace class="weui_navbar_item" active-class="weui_bar_item_on">
 				<p class="kimg dhzhongxinicon"></p>
 				<p> 我的</p>
 			</router-link>
@@ -39,14 +39,14 @@
 export default {
 	data () {
 		return {
-			index:5
+			index:1
 		}
 	},
 	methods:{
 		doClickNav:function(index){
-			
+			alert(index);
 			this.index=index;
-			this.$emit('child-tell-me-something',index);
+			//this.$emit('child-tell-me-something',index);
 		}
 	}
 }
