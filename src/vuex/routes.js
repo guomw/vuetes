@@ -13,7 +13,7 @@ export default {
     getRoutes: function () {
         var routes = [
             { path: '/', component: Home },
-            { path: '/home', component: Home },
+            { path: '/home/:id', component: Home },
             { path: '/cfy', component: Classify },
             { path: '/cart', component: Cart },
             { path: '/my', component: MyCenter },
